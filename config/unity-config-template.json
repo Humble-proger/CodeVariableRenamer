@@ -1,0 +1,128 @@
+{
+  "format": "camelCase",
+  "prefix": "_",
+  "targets": ["fields", "properties", "locals", "parameters"],
+
+  "typeSpecificRules": {
+    "fields": {
+      "public": {
+        "format": "PascalCase",
+        "prefix": ""
+      },
+      "protected": {
+        "format": "camelCase",
+        "prefix": ""
+      },
+      "private": {
+        "format": "camelCase",
+        "prefix": "_"
+      },
+      "internal": {
+        "format": "camelCase",
+        "prefix": ""
+      }
+    },
+    "properties": {
+      "public": {
+        "format": "PascalCase",
+        "prefix": ""
+      },
+      "protected": {
+        "format": "PascalCase",
+        "prefix": ""
+      },
+      "private": {
+        "format": "PascalCase",
+        "prefix": ""
+      }
+    },
+    "methods": {
+      "public": {
+        "format": "PascalCase",
+        "prefix": ""
+      },
+      "private": {
+        "format": "PascalCase",
+        "prefix": ""
+      }
+    },
+    "parameters": {
+      "format": "camelCase",
+      "prefix": ""
+    },
+    "locals": {
+      "format": "camelCase",
+      "prefix": ""
+    }
+  },
+  "exceptions": [
+    "ID", "UI", "GUI", "UV", "FPS", "LOD", "AABB", "OBB",
+    
+    "MonoBehaviour", "ScriptableObject", "GameObject", "Transform",
+    "Component", "Behaviour", "Renderer", "Collider", "Rigidbody",
+    "Animator", "Animation", "AudioSource", "Camera", "Light",
+    "Material", "Shader", "Texture", "Sprite", "Mesh", "Canvas",
+    
+    "Vector2", "Vector3", "Vector4", "Quaternion", "Matrix4x4",
+    "Rect", "Bounds", "Ray", "Plane", "Color", "Color32",
+    
+    "UnityEngine", "UnityEditor", "System", "Collections",
+    
+    "int", "float", "double", "bool", "string", "char", "byte",
+    "object", "dynamic", "var", "void", "Task", "async", "await",
+    
+    "NPC", "AI", "UI", "HUD", "FPS", "RPG", "RTS", "MMO",
+    "XP", "HP", "MP", "SP", "AP", "DPS", "DOT", "AOE", "CD",
+    
+    "Awake", "Start", "Update", "FixedUpdate", "LateUpdate",
+    "OnEnable", "OnDisable", "OnDestroy", "OnValidate",
+    "OnTriggerEnter", "OnTriggerExit", "OnCollisionEnter",
+    
+    "OnClick", "OnValueChanged", "OnEndEdit", "OnSelect",
+    "OnDeselect", "OnSubmit", "OnCancel"
+  ],
+  "customReplacements": {
+    "player": "player",
+    "enemy": "enemy",
+    "bullet": "bullet",
+    "spawn": "spawn",
+    "target": "target",
+    "health": "health",
+    "damage": "damage",
+    "score": "score",
+    "level": "level",
+    "skill": "skill",
+    "item": "item",
+    "inventory": "inventory",
+    "quest": "quest"
+  },
+  "partialReplacements": {
+    "scale": "scale",
+    "max": "maximum",
+    "min": "minimum",
+    "avg": "average",
+    "temp": "temporary",
+    "pos": "position",
+    "rot": "rotation",
+    "vel": "velocity",
+    "acc": "acceleration",
+    "dist": "distance",
+    "dur": "duration",
+    "cnt": "count",
+    "idx": "index",
+    "num": "number",
+    "str": "string",
+    "btn": "button",
+    "txt": "text",
+    "lbl": "label",
+    "img": "image",
+    "ico": "icon",
+    "pnl": "panel",
+    "grp": "group",
+    "scr": "scroll",
+    "slider": "slider",
+    "toggle": "toggle",
+    "dropdown": "dropdown",
+    "input": "inputField"
+  }
+}

@@ -1,0 +1,92 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Unity: Rename Standard",
+            "type": "shell",
+            "command": "{Путь к файлу}/CodeVariableRenamer",
+            "args": [
+                "--file",
+                "${file}",
+                "--config",
+                "{Путь к файлу}/config-template.json",
+                "--format",
+                "camelCase",
+                "--prefix",
+                "_"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Unity: Rename Public Members",
+            "type": "shell",
+            "command": "{Путь к файлу}/CodeVariableRenamer",
+            "args": [
+                "--file",
+                "${file}",
+                "--format",
+                "PascalCase",
+                "--targets",
+                "properties",
+                "fields"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Unity: Fix Serialized Fields",
+            "type": "shell",
+            "command": "{Путь к файлу}/CodeVariableRenamer",
+            "args": [
+                "--file",
+                "${file}",
+                "--format",
+                "PascalCase",
+                "--targets",
+                "fields"
+            ],
+            "group": "build",
+            "detail": "Делает SerializeField поля PascalCase (стандарт Unity)"
+        },
+        {
+            "label": "Unity: Preview Changes",
+            "type": "shell",
+            "command": "{Путь к файлу}/CodeVariableRenamer",
+            "args": [
+                "--file",
+                "${file}",
+                "--config",
+                "{Путь к файлу}/config-template.json",
+                "--dry-run"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Unity: Rename All Scripts",
+            "type": "shell",
+            "command": "{Путь к файлу}/CodeVariableRenamer",
+            "args": [
+                "--dir",
+                "${workspaceFolder}/Assets/Scripts",
+                "--config",
+                "{Путь к конфигу}/config-template.json"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "Unity: Constants to UPPER_CASE",
+            "type": "shell",
+            "command": "${Путь к конфигу}/CodeVariableRenamer",
+            "args": [
+                "--file",
+                "${file}",
+                "--format",
+                "SCREAMING_SNAKE",
+                "--targets",
+                "fields"
+            ],
+            "group": "build",
+            "detail": "Для const полей и static readonly"
+        }
+    ]
+}
